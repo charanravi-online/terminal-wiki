@@ -9,6 +9,8 @@ def search_wikipedia(query):
     soup = BeautifulSoup(response.content, 'html.parser')
     # Extract the main content of the page and print it in the terminal
     content = soup.find(id='mw-content-text').find_all('p')
+    search_url = response.url
+    print("the url we searched for is: ", search_url)
     print('\n'.join([p.get_text() for p in content]))
 
 query = input("Enter a topic to search for: ")
