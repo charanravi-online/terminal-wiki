@@ -13,5 +13,6 @@ def search_wikipedia(query):
     print("the url we searched for is: ", search_url)
     print('\n'.join([p.get_text() for p in content]))
 
+print("MAKE SURE YOU'RE ENTERING VALID TOPICS THAT ARE SEARCHABLE ON WIKIPEDIA")
 query = input("Enter a topic to search for: ")
 search_wikipedia(query)
