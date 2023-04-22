@@ -45,6 +45,3 @@ Enter your search query: python programming
 ```
 
 The script will then fetch and parse the information from the Python programming page on Wikipedia and print it to the terminal.
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
