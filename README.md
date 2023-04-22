@@ -18,7 +18,6 @@ You can install these modules using pip:
 
 ```
 pip install requests beautifulsoup4
-
 ```
 
 
@@ -30,7 +29,6 @@ To run the script, simply navigate to the directory containing the script and ex
 
 ```bash
   python Terminal-Wiki.py
-
 ```
 The script will then prompt you to enter a search query. Enter the topic you want to search for in Wikipedia and press enter. The script will then fetch and parse the information from the corresponding Wikipedia page and print it to the terminal.
 
@@ -41,7 +39,6 @@ Here's an example of how to use the script:
 ```
 python Terminal-Wiki.py
 Enter your search query: python programming
-
 ```
 
 The script will then fetch and parse the information from the Python programming page on Wikipedia and print it to the terminal.
