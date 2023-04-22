@@ -1,0 +1,21 @@
+# This is a YAML configuration file for the pythonpublish tool
+
+name: Terminal-Wiki
+version: 1.0.0
+description: A Python script that searches Wikipedia and prints the result to the terminal
+author: R Charan
+email: charanravi.online@gmail.com
+license: MIT
+url: https://github.com/charanravi-online/Terminal-Wiki
+keywords:
+  - wikipedia
+  - terminal
+  - python
+packages:
+  - requests
+  - beautifulsoup4
+classifiers:
+  - Programming Language :: Python
+  - Programming Language :: Python :: 3
+  - License :: OSI Approved :: MIT License
+  - Operating System :: OS Independent
