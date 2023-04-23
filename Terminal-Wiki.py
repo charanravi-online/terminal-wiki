@@ -6,6 +6,12 @@ def search_wikipedia(query):
     query = query.replace(' ', '_')
     # Make the API request and parse the HTML response
     response = requests.get(f"https://en.wikipedia.org/wiki/{query}")
+    if response.status_code == 404:
+        print('Wikipedia does not have an article with this exact name.')
+        return
+    elif response.status_code != 200:
+        print('There is a problem with fetching data. please try again!')
+        return
     soup = BeautifulSoup(response.content, 'html.parser')
     # Extract the main content of the page and print it in the terminal
     content = soup.find(id='mw-content-text').find_all('p')
