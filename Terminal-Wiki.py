@@ -1,4 +1,3 @@
-# This is a test comment
 import requests
 from bs4 import BeautifulSoup
 
