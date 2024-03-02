@@ -1,5 +1,5 @@
 
-# werminal-wiki
+# terminal-wiki
 
 This is a Python script that uses requests and BeautifulSoup modules to fetch and parse information from Wikipedia based on a user-provided search query via the terminal.
 
