@@ -1,5 +1,5 @@
 
-# Terminal-Wiki
+# werminal-wiki
 
 This is a Python script that uses requests and BeautifulSoup modules to fetch and parse information from Wikipedia based on a user-provided search query via the terminal.
 
@@ -42,3 +42,6 @@ Enter your search query: python programming
 ```
 
 The script will then fetch and parse the information from the Python programming page on Wikipedia and print it to the terminal.
+
+
+Update: I am trying to package this into a snap package, which would enable users to install it on their machines via snap and use it. Felt it is way better of a tool suitable for that kind of environment than running a python script after cloning from GitHub.
