@@ -11,11 +11,11 @@ confinement: strict
 apps:
   wiki:
     command: bin/wiki
-    plugs: network
+    plugs:
+      - network 
 
 parts:
   wiki:
-    # See 'snapcraft plugins'
     plugin: python
     source: .
     requirements: ['requirements.txt']
