@@ -11,6 +11,7 @@ confinement: strict
 apps:
   wiki:
     command: bin/wiki
+    plugs: network
 
 parts:
   wiki:
