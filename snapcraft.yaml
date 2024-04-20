@@ -1,9 +1,9 @@
 name: wiki
 base: core20 
-version: '0.1'
-summary: Simple CLI tool to fetch Wikipedia summaries
+version: '1.0'
+summary: A command-line tool to get Wikipedia summaries in your terminal
 description: |
-  This is a simple CLI tool that fetches and displays Wikipedia summaries.
+  This is a simple CLI tool that fetches and displays Wikipedia summaries on your terminal.
 
 grade: stable
 confinement: strict
