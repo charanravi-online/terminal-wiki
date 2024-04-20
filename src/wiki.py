@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 from colorama import Fore, Style
 
 def search_wikipedia(query):
-    print(query)
     query = query.replace(' ', '_')
     response = requests.get(f"https://en.wikipedia.org/wiki/{query}")
    
