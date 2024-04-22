@@ -219,4 +219,5 @@ Read more: https://en.wikipedia.org/wiki/Albert_Einstein
 The script will then fetch and parse the information from the page on Wikipedia and print it to the terminal.
 
 
-- [x] Update: I am trying to package this into a snap package, which would enable users to install it on their machines via snap and use it. Felt it is way better of a tool suitable for that kind of environment than running a python script after cloning from GitHub.
+- [x] Snap: I am trying to package this into a snap package, which would enable users to install it on their machines via snap and use it. Felt it is way better of a tool suitable for that kind of environment than running a python script after cloning from GitHub.
+- [ ] Flatpak: create and deploy flatpak application for the same purpose.
