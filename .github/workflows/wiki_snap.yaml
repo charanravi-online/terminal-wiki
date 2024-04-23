@@ -11,10 +11,12 @@ jobs:
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Ensures the full history is checked out
 
       - name: Push changes to target repository
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.REPO_SYNC_TOKEN }}
-          repository: charanravi-online/wiki # replace with your target repository
-          branch: main  # target branch to push changes
+          repository: charanravi-online/wiki # Ensure this is the correct repo
+          branch: main  # Confirm this is the branch you want to push to
