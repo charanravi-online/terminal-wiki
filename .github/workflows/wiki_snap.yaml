@@ -3,7 +3,7 @@ name: Sync Source Code to Wiki Repository
 on:
   push:
     branches:
-      - main
+      - main  # Ensure this is your default or intended branch
 
 jobs:
   sync:
@@ -24,5 +24,3 @@ jobs:
       - name: Push changes to target repository
         run: |
           git push target main --force
-          
-# test
