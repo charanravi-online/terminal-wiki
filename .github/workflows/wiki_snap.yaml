@@ -1,4 +1,4 @@
-name: source code sync to wiki
+name: Sync Source Code to Wiki Repository
 
 on:
   push:
@@ -8,14 +8,23 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Ensures the full history is checked out
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'actions@github.com'
+
+      - name: Add target repository
+        run: |
+          git remote add target https://x-access-token:${{ secrets.REPO_SYNC_TOKEN }}@github.com/charanravi-online/wiki.git
 
       - name: Push changes to target repository
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.REPO_SYNC_TOKEN }}
-          repository: charanravi-online/wiki
-          branch: main
-          #testing purpose
+        run: |
+          git push target main --force
