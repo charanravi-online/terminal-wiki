@@ -19,7 +19,7 @@ jobs:
 
       - name: Add target repository
         run: |
-          git remote add target https://x-access-token:${{ secrets.REPO_SYNC_TOKEN }}@github.com/charanravi-online/wiki.git
+          git remote add target https://x-access-token:${{ secrets.REPO_SYNC_TOKEN }}@github.com/charanravi-online/wiki
 
       - name: Push changes to target repository
         run: |
