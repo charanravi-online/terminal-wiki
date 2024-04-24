@@ -1,3 +1,6 @@
+![wiki](https://github.com/charanravi-online/wiki/blob/main/snap_icon/wiki.png)
+
+
 # What is Terminal-Wiki?
 
 Terminal-wiki contains the main logic and source code that fetches information from Wikipedia.\
