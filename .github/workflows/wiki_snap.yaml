@@ -8,23 +8,33 @@ on:
   push:
     branches:
       - main  # Ensure this is your default or intended branch
+      
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source repo
-        uses: actions/checkout@v3
+      - name: Pushes to Repository
+        uses: tech-thinker/push-to-repo@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.REPO_SYNC_TOKEN }}
+        with:
+          user-name: "github-actions[bot]"
+          user-email: github-actions[bot]@users.noreply.github.com
+          source-directory: "output-dir"
+          destination-github-username: "charanravi-online"
+          destination-repository-name: "wiki"
+          target-branch: main
 
-      - name: Configure Git
-        run: |
-          git config --global user.name 'GitHub Actions Bot'
-          git config --global user.email 'actions@github.com'
+#       - name: Configure Git
+#         run: |
+#           git config --global user.name 'GitHub Actions Bot'
+#           git config --global user.email 'actions@github.com'
 
-      - name: Add target repository
-        run: |
-          git remote add target https://x-access-token:${{ secrets.REPO_SYNC_TOKEN }}@github.com/charanravi-online/wiki.git
+#       - name: Add target repository
+#         run: |
+#           git remote add target https://x-access-token:${{ secrets.REPO_SYNC_TOKEN }}@github.com/charanravi-online/wiki.git
 
-      - name: Push changes to target repository
-        run: |
-          git push target main --force
+#       - name: Push changes to target repository
+#         run: |
+#           git push target main --force
