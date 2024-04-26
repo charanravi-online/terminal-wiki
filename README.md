@@ -1,4 +1,6 @@
+# Project Workflow
 
+![workflow](https://github.com/charanravi-online/terminal-wiki/blob/main/wiki_project_workflow.png)
 
 
 # What is Terminal-Wiki?
