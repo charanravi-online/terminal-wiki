@@ -5,6 +5,7 @@
 - [terminal-wiki](https://github.com/charanravi-online/terminal-wiki)
 - [wiki](https://github.com/charanravi-online/wiki)
 - [github actions](https://github.com/charanravi-online/wiki/actions)
+- [snapcraft.yaml](https://github.com/charanravi-online/wiki/blob/main/snapcraft.yaml)
 
 # terminal-wiki
 
