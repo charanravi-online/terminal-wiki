@@ -24,7 +24,15 @@ def search_wikipedia(query):
     # Extract and display the info box if present
     infobox = soup.find('table', class_='infobox')
     if infobox:
-        print(Style.BRIGHT + clean_references(infobox.get_text(separator='\n', strip=True)) + Style.RESET_ALL + '\n')
+        # print(Style.BRIGHT + clean_references(infobox.get_text(separator='\n', strip=True)) + Style.RESET_ALL + '\n')
+        infobox_rows = infobox.find_all('tr')
+        for row in infobox_rows:
+            if row.th and row.td:
+                # Extracting text from table header (th) and table data (td) and removing references.
+                header_text = clean_references(row.th.get_text().strip())
+                data_text = clean_references(row.td.get_text().strip())
+                # Printing the header and data on the same line, separated by a colon and a space.
+                print(f"{Style.BRIGHT}{header_text}{Style.RESET_ALL}: {data_text}")
 
     # Extract the first few paragraphs
     content = soup.find(id='mw-content-text').find_all('p')

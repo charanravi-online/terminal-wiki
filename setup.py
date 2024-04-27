@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='wiki',
-    version='0.1',
+    version='1.0',
     description='A simple CLI tool to fetch Wikipedia summaries.',
     py_modules=['wiki'],
     package_dir={'': 'src'},
