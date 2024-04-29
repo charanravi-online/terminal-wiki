@@ -1,4 +1,4 @@
-# Project Workflow
+# project workflow
 
 ![workflow](https://github.com/charanravi-online/terminal-wiki/blob/main/wiki_project_workflow.png)
 
