@@ -21,3 +21,6 @@ It can be found here:  https://github.com/charanravi-online/wiki
 
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/wiki)
 
+# updates
+- [ ] distribute application to flatpak
+
