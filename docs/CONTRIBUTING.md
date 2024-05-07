@@ -4,7 +4,7 @@ Before anything, make sure you undertand where the issue or enhancement is requi
 If there's an issue with the logic or the python application itself, then the issue should be created in the [terminal-wiki](https://github.com/charanravi-online/terminal-wiki) repository (this repo).\
 If there's an issue with the snapcraft implementation, then the issue should be raised in the [wiki](https://github.com/charanravi-online/wiki) repository.\
 Reason being, the main application is stored in [terminal-wiki](https://github.com/charanravi-online/terminal-wiki) and this is being synced periodically to [wiki](https://github.com/charanravi-online/wiki)\
-where a snapcraft.yaml file packages the python application.\
+where a snapcraft.yaml file packages the python application.
 
 for more information, refer the [README](https://github.com/charanravi-online/terminal-wiki/blob/main/README.md) where I try to break things down for easier understanding.
 
