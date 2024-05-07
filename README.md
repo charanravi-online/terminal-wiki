@@ -24,3 +24,6 @@ It can be found here:  https://github.com/charanravi-online/wiki
 # updates
 - [ ] distribute application to flatpak
 
+
+# contribution guidelines
+Refer the [CONTRIBUTION](https://github.com/charanravi-online/terminal-wiki/blob/main/docs/CONTRIBUTING.md) for contribution guidelines before making any contributions.
