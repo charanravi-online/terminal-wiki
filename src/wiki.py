@@ -2,7 +2,9 @@ import argparse
 import requests
 import re
 from bs4 import BeautifulSoup
-from colorama import Fore, Style
+from colorama import Fore, Style, init
+
+init() #init colorama for windows compatibility
 
 def clean_references(text):
     # Use regular expressions to remove references, e.g., [1], [2], etc.
