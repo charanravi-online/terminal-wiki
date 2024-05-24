@@ -6,6 +6,7 @@
 - [wiki](https://github.com/charanravi-online/wiki)
 - [github actions](https://github.com/charanravi-online/wiki/actions)
 - [snapcraft.yaml](https://github.com/charanravi-online/wiki/blob/main/snapcraft.yaml)
+- [manifest.yaml](https://github.com/microsoft/winget-pkgs/pull/153706/)
 
 # terminal-wiki
 
