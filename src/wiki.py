@@ -4,11 +4,14 @@ import re
 from bs4 import BeautifulSoup
 from colorama import Fore, Style, init
 
-init() #init colorama for windows compatibility
+# init colorama for windows compatibility
+init()
+
 
 def clean_references(text):
     # Use regular expressions to remove references, e.g., [1], [2], etc.
     return re.sub(r'\[\d+\]', '', text)
+
 
 def search_wikipedia(query):
     query = query.replace(' ', '_')
@@ -20,7 +23,7 @@ def search_wikipedia(query):
     elif response.status_code != 200:
         print(Fore.RED + 'There is a problem with fetching data. Please try again!')
         return
-    
+
     soup = BeautifulSoup(response.content, 'html.parser')
 
     # Extract and display the info box if present
@@ -49,8 +52,10 @@ def search_wikipedia(query):
 
     print(Fore.BLUE + "Read more:", search_url)
 
+
 def search_top_results(query):
-    response = requests.get(f"https://en.wikipedia.org/w/index.php?fulltext=1&search={query}&title=Special%3ASearch&ns0=1")
+    response = requests.get(
+        f"https://en.wikipedia.org/w/index.php?fulltext=1&search={query}&title=Special%3ASearch&ns0=1")
 
     if response.status_code != 200:
         print(Fore.RED + 'There is a problem with fetching data. Please try again!')
@@ -68,7 +73,7 @@ def search_top_results(query):
     for i, item in enumerate(top_results):
         title = item.find('a').get('title').strip()
         desc = item.find('div', class_='searchresult').get_text().strip()
-        print(f"{Style.BRIGHT}{i+1}. {Fore.CYAN}{title}{Fore.RESET}{Style.RESET_ALL} - {clean_references(desc)}\n")
+        print(f"{Style.BRIGHT}{i + 1}. {Fore.CYAN}{title}{Fore.RESET}{Style.RESET_ALL} - {clean_references(desc)}\n")
 
     # Ask user which article they want
     while True:
@@ -76,16 +81,18 @@ def search_top_results(query):
         if page.lower() == 'q':
             return  # User wants to quit
         elif page.isdigit() and 1 <= int(page) <= len(top_results):
-            search_wikipedia(top_results[int(page)-1].find('a').get('title').strip())
+            search_wikipedia(top_results[int(page) - 1].find('a').get('title').strip())
             break
         else:
             print(Fore.RED + "Invalid input, please try again.")
+
 
 def main():
     parser = argparse.ArgumentParser(description='Search for Wikipedia pages.')
     parser.add_argument('query', type=str, help='The Wikipedia page to search for')
     args = parser.parse_args()
     search_top_results(args.query)
+
 
 if __name__ == "__main__":
     main()
